@@ -1,0 +1,30 @@
+!!!
+%html
+  %head
+    %title 500 Interviews
+    = stylesheet_link_tag "bootstrap-buttons"
+    = stylesheet_link_tag "bootstrap-form"
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+    = yield :head
+
+  %body
+    #container
+      #header
+        #inside
+          = link_to :root do
+            = image_tag 'logo.png', class: 'logo'
+          #nav
+            = link_to 'FAQ', :root
+            = link_to 'About', '#'
+            = link_to 'Contact', '#'
+            = link_to 'Login', '#'
+
+      #wrapper
+        = yield
+      #footer
+        .inside
+          &copy; 500 Interviews. All rights reserved.
+      %div{ style: 'clear:both;' }
+

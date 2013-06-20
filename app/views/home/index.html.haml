@@ -1,0 +1,70 @@
+%h1 The fastest way to land interviews at tech companies
+
+Every week we compile a small list of talented developers and designers that are looking for jobs,
+then we send this list out to companies that are hiring. 
+
+.gray_line
+
+%h2 Designers &amp; Developers: Looking for work? Get interviews on a silver platter.
+
+You can pick and choose the interviews you want to take.
+Your name and other identifying info will be kept private until you accept an invitation to interview.
+500 Interviews is completely free for you.
+
+.space
+.space
+  
+= form_tag '#' do
+  = submit_tag 'Sign Up', class: 'btn'
+
+.gray_line
+
+%h2 Companies: Hiring devs? Save time and money.
+
+500 Interviews can save you thousands of dollars on recruting fees that you might pay to a traditional recruiter.
+Each week we send you a curated list of skilled developers or designers.
+
+.space
+.space
+= form_tag '#' do
+  %label{ style: 'text-align:left;width:80px;' } Your email:
+  = email_field_tag :email
+  %br
+  .space
+  .space
+  What roles are you looking to fill?
+  .space
+  %label
+    = check_box_tag "front_end"
+    Front-end Developers
+  .space
+  %label
+    = check_box_tag "back_end" 
+    Back-end Programmers
+  .space
+  %label
+    = check_box_tag "designers"
+    Designers
+  .space
+  %label
+    = check_box_tag "sys_admins"
+    Sys-Admins
+  .space
+  %label
+    = check_box_tag "project_managers" 
+    Project Managers
+
+  .space
+  .space
+  = submit_tag 'Sign Up', class: 'btn'
+
+:css
+  label {
+    width:180px;
+    text-align:left;
+  }
+
+  input[type="checkbox"] {
+    margin-right:4px;
+    margin-bottom:4px;
+    }

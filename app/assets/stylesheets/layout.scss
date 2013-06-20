@@ -1,0 +1,87 @@
+$wrapper_width: 820px;
+$wrapper_padding_vertical: 15px;
+$wrapper_padding_horizontal: 40px;
+$font_size: 15px;
+
+* {
+  margin:0;
+  padding:0;
+  font-size: $font_size;
+  font-weight:normal;
+}
+
+h1 {
+  font-size:26px;
+  text-shadow:0 1px 0 white;
+  font-family:"MyriadPro-Semibold";
+}
+
+h2 {
+  font-size:20px;
+  text-shadow:0 1px 0 white;
+  font-family:"MyriadPro-Semibold";
+  margin-bottom:5px;
+}
+
+html, body {
+  background:#222222;
+  color:#333;
+  font-family:"Myriad Pro";
+  font-size: $font_size;
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+a {
+  text-decoration:none;
+}
+
+#container {
+  height:100%;
+}
+
+#header {
+  height:46px;
+  background:url('header_bg.png') repeat-x;
+
+  #inside {
+    width: $wrapper_width;
+    margin:0 auto;
+    padding:12px 0 0 0;
+  }
+
+  #nav {
+    float:right;
+    margin-top:2px;
+
+    a {
+      color:#ddd;
+      margin:20px;
+    }
+
+  }
+}
+
+#wrapper {
+  width: $wrapper_width;
+  padding: $wrapper_padding_vertical $wrapper_padding_horizontal;
+  margin:0 auto;
+  line-height:1.6;
+  background:#F5F5F5;
+  min-height:80%;
+  box-shadow: 0px 2px 0px 0px black;
+  padding-bottom:30px;
+}
+
+#footer {
+  width: $wrapper_width+$wrapper_padding_horizontal*2;
+  margin:10px auto 0 auto;
+  padding-bottom:30px;
+  .inside {
+    font-size:13px;
+    color:#aaa;
+    margin-left:10px;
+  }
+}
+
