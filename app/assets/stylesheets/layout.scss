@@ -35,6 +35,10 @@ html, body {
 
 a {
   text-decoration:none;
+  color:#0066cc;
+  &:visited, &:hover, &:active {
+    color:#0066cc;
+  }
 }
 
 #container {
@@ -85,3 +89,10 @@ a {
   }
 }
 
+error {
+  background:#ccc;
+  color:#333;
+  padding:12px 25px;
+  margin-bottom:15px;
+  display:block;
+}

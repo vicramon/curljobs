@@ -1,5 +1,7 @@
-%h1 The fastest way to land interviews at tech companies
+- if flash[:error]
+  %error= flash[:error]
 
+%h1 The fastest way to land interviews at tech companies
 Every week we compile a small list of talented developers and designers that are looking for jobs,
 then we send this list out to companies that are hiring. 
 
@@ -26,37 +28,37 @@ Each week we send you a curated list of skilled developers or designers.
 
 .space
 .space
-= form_tag '#' do
+= form_for company do |f|
   %label{ style: 'text-align:left;width:80px;' } Your email:
-  = email_field_tag :email
+  = f.email_field :email
   %br
   .space
   .space
   What roles are you looking to fill?
   .space
   %label
-    = check_box_tag "front_end"
+    = f.check_box "front_end"
     Front-end Developers
   .space
   %label
-    = check_box_tag "back_end" 
+    = f.check_box "back_end" 
     Back-end Programmers
   .space
   %label
-    = check_box_tag "designers"
+    = f.check_box "designers"
     Designers
   .space
   %label
-    = check_box_tag "sys_admins"
+    = f.check_box "sys_admins"
     Sys-Admins
   .space
   %label
-    = check_box_tag "project_managers" 
+    = f.check_box "project_managers" 
     Project Managers
 
   .space
   .space
-  = submit_tag 'Sign Up', class: 'btn'
+  = f.submit 'Sign Up', class: 'btn'
 
 :css
   label {
