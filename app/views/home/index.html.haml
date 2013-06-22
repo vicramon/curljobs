@@ -1,3 +1,4 @@
+
 - if flash[:error]
   %error= flash[:error]
 
@@ -16,8 +17,9 @@ Your name and other identifying info will be kept private until you accept an in
 .space
 .space
   
-= form_tag '#' do
+= form_tag new_candidate_path, method: :get do
   = submit_tag 'Sign Up', class: 'btn'
+  %span.grey.aside_button All aboard the jobs train. Choo choo!
 
 .gray_line
 
@@ -29,8 +31,8 @@ Each week we send you a curated list of skilled developers or designers.
 .space
 .space
 = form_for company do |f|
-  %label{ style: 'text-align:left;width:80px;' } Your email:
-  = f.email_field :email
+  %label{ style: 'text-align:left;width:75px;' } Your email:
+  = f.text_field :email
   %br
   .space
   .space
@@ -59,6 +61,7 @@ Each week we send you a curated list of skilled developers or designers.
   .space
   .space
   = f.submit 'Sign Up', class: 'btn'
+  %span.grey.aside_button No third-party recruiters please
 
 :css
   label {
@@ -70,3 +73,5 @@ Each week we send you a curated list of skilled developers or designers.
     margin-right:4px;
     margin-bottom:4px;
     }
+
+= javascript_include_tag "home_page"

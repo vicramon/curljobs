@@ -4,4 +4,13 @@
 
 @import "layout";
 @import "decorations";
+@import "live_validation";
 
+th {
+  font-weight:bold;
+  text-align:left;
+}
+
+table {
+  width:100%
+}

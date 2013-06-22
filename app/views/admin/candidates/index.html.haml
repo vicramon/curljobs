@@ -1,0 +1,14 @@
+%h1 Candidates
+
+%table
+  %thead
+    %tr
+      %td Name
+      %td Email
+      %td Roles
+  %tbody
+    - candidates.each do |candidate|
+      %tr
+        %td= candidate.name
+        %td= candidate.email
+        %td= candidate.pretty_roles

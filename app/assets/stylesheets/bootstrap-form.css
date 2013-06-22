@@ -5,7 +5,7 @@ input[type="email"], input[type="text"], input[type="password"], textarea, selec
   font-family:"Myriad Pro";
   font-size:14px;
   color:#333;
-  padding: 6px 7px;
+  padding: 3px 5px;
   border: 1px solid #bbb;
   border-top-color: #bbb;
   -webkit-border-radius: 4px;
@@ -16,6 +16,10 @@ input[type="email"], input[type=text],input[type=password],select,textarea {-web
 
 input[type="email"]:focus, input[type=text]:focus,input[type=password]:focus,textarea:focus {outline:none;border-color:rgba(82, 168, 236, 0.8);-webkit-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1),0 0 8px rgba(82, 168, 236, 0.6);-moz-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1),0 0 8px rgba(82, 168, 236, 0.6);box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1),0 0 8px rgba(82, 168, 236, 0.6);}
 
+input[type="submit"] {
+  padding-right:25px;
+  padding-left:25px;
+}
 
 label {
   width:90px;

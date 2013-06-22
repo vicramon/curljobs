@@ -6,6 +6,7 @@
     = stylesheet_link_tag "bootstrap-form"
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
+    = javascript_include_tag "livevalidation"
     = csrf_meta_tags
     = yield :head
 
@@ -16,10 +17,10 @@
           = link_to :root do
             = image_tag 'logo.png', class: 'logo'
           #nav
-            = link_to 'FAQ', :root
-            = link_to 'About', '#'
-            = link_to 'Contact', '#'
-            = link_to 'Login', '#'
+            = link_to 'FAQ', :faq
+            = link_to 'About', :about
+            = link_to 'Contact', :contact
+            -#= link_to 'Login', '#'
 
       #wrapper
         = yield
@@ -28,3 +29,6 @@
           &copy; 500 Interviews. All rights reserved.
       %div{ style: 'clear:both;' }
 
+    = javascript_include_tag "//static.getclicky.com/js"
+    :javascript
+      try{ clicky.init(100627509); }catch(e){}

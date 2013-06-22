@@ -5,5 +5,10 @@ class ApplicationController < ActionController::Base
     strategy DecentExposure::StrongParametersStrategy
   end
 
+  def root_domain
+    '500interviews.co'
+  end
+  helper_method :root_domain
+
 
 end

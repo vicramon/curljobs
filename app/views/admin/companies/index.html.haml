@@ -1,7 +1,10 @@
-- companies.each do |company|
-  = company.email
-  .space
-  Front-end: 
-  = company.front_end
-  .space20
+%table
+  %tr
+    %th Email
+    %th Looking For
+  - companies.each do |company|
+    %tr
+      %td= company.email
+      %td
+        = company.looking_for.join(", ").gsub("_"," ")
 
