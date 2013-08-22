@@ -1,0 +1,58 @@
+%article
+
+  - if flash[:error]
+    %error= flash[:error]
+
+  = form_for company do |f|
+
+    %label{ style: 'text-align:left;width:90px;' } Your email:
+    = f.text_field :email
+
+    .space30
+
+    What roles are you looking to fill?
+
+    .space10
+
+    %label
+      = f.check_box "front_end"
+      Front-end Developers
+    .space
+
+    %label
+      = f.check_box "back_end"
+      Back-end Programmers
+    .space
+
+    %label
+      = f.check_box "designers"
+      Designers
+    .space
+
+    %label
+      = f.check_box "sys_admins"
+      Sys-Admins
+    .space
+
+    %label
+      = f.check_box "project_managers"
+      Project Managers
+
+    .space25
+
+    = f.submit 'Sign Up', class: 'btn'
+
+    %span.grey.aside_button No third-party recruiters please
+
+  :css
+    label {
+      width:300px;
+      text-align:left;
+    }
+
+    input[type="checkbox"] {
+      margin-right:4px;
+      margin-bottom:4px;
+      }
+
+  = javascript_include_tag "home_page"

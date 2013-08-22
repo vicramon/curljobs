@@ -1,102 +1,104 @@
-%h2{ style: 'margin-bottom:0;'} Candidate Signup
-.gray_line{ style: 'margin-top:2px;' }
+%article
 
-= form_for candidate do |f|
+  = form_for candidate do |f|
 
-  .space10
-  %label{ style: 'text-align:right;width:75px;' } Your Name:
-  = f.text_field :name
-  .space10
+    .space10
+    %label{ style: 'width:100px;' } Your Name:
+    = f.text_field :name
+    .space10
 
-  %label{ style: 'text-align:right;width:75px;' } Your Email:
-  = f.text_field :email
-  .space20
+    %label{ style: 'width:100px;' } Your Email:
+    = f.text_field :email
+    .space20
 
-  What do you want to do?
-  .space10
+    Your role/roles:
+    .space10
 
-  %label
-    = f.check_box :front_end
-    Front-end
-  .space
+    %label
+      = f.check_box :front_end
+      Front-end
+    .space
 
-  %label
-    = f.check_box :back_end
-    Back-end
-  .space
+    %label
+      = f.check_box :back_end
+      Back-end
+    .space
 
-  %label
-    = f.check_box :designer
-    Designer
-  .space
+    %label
+      = f.check_box :designer
+      Designer
+    .space
 
-  %label
-    = f.check_box :sys_admin
-    Sys Admin
-  .space
+    %label
+      = f.check_box :sys_admin
+      Sys Admin
+    .space
 
-  %label
-    = f.check_box :project_manager
-    Project Manager
-  .space20
+    %label
+      = f.check_box :project_manager
+      Project Manager
+    .space20
 
-  What languages and frameworks are you familiar with?
-  Do you have a preference for what you want to work in?
-  .space
-  = f.text_area :languages
-  .space10
+    What languages and frameworks are you familiar with?
+    %br
+    What would you prefer to work in?
+    .space
+    = f.text_area :languages
+    .space10
 
-  Who have you worked for in the past? What did you do?
-  .space
-  = f.text_area :past_jobs
-  .space10
+    Who have you worked for in the past? What did you do?
+    .space
+    = f.text_area :past_jobs
+    .space10
 
-  Can you point us to your Github (Dribbble for designers) or some work samples?
-  .space
-  = f.text_area :work_samples
-  .space10
+    Can you point us to your Github (Dribbble for designers) and/or
+    %br
+    some work samples?
+    .space
+    = f.text_area :work_samples
+    .space10
 
-  Where do you live?
-  .space
-  = f.text_field :location
-  .space15
+    Where do you live?
+    .space
+    = f.text_field :location
+    .space15
 
-  Are you willing to relocate?
-  .space
-    = f.select :relocate, [["no",false],["yes",true]]
-  %br
-  .space10
+    Are you willing to relocate?
+    .space
+      = f.select :relocate, [["no",false],["yes",true]]
+    %br
+    .space10
 
-  If so, do you have any location preferences? 
-  .space
-  = f.text_area :relocation_preferences, style: 'width:450px;height:40px;'
+    If yes, do you have any location preferences? 
+    .space
+    = f.text_area :relocation_preferences, style: 'width:450px;height:40px;'
 
 
-  .space
-  = f.submit 'Done', class: 'btn'
-  %span.grey{ style: 'padding-left:8px;padding-top:4px;' } Easy, right?
+    .space10
+    = f.submit 'Done', class: 'btn'
+    %span.grey{ style: 'padding-left:8px;padding-top:4px;' } Easy, right?
 
-:javascript
-  $('#candidate_name').focus();
+  :javascript
+    $('#candidate_name').focus();
 
-:css
-  label {
-    width:180px;
-    text-align:left;
-  }
-
-  select {
-    width:60px;
-  }
-
-  input[type="checkbox"] {
-    margin-right:4px;
-    margin-bottom:4px;
+  :css
+    label {
+      width:180px;
+      text-align:left;
     }
 
-  textarea {
-  width:460px;
-  height:60px;
-  }
+    select {
+      width:60px;
+    }
 
-= javascript_include_tag 'new_candidate'
+    input[type="checkbox"] {
+      margin-right:4px;
+      margin-bottom:4px;
+      }
+
+    textarea {
+    width:460px;
+    height:65px;
+    }
+
+  = javascript_include_tag 'new_candidate'

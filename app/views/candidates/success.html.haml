@@ -1,24 +1,25 @@
-%h2 You're in!
-.space10
-You're now on our list. Thanks for signing up! We hope that our service is genuinely helpful. 
-.space10
-We handpick the people we highlight each week, so we'll let you know in advance when you get selected.
+%article
 
-.space10
-= "If you think of anything else you want to send us, you can always email us at"
-= mail_to "support@#{root_domain}."
+  Thanks for signing up! You're now on our list.
 
-.space10
+  .space20
 
-Also, please refer anyone else you know that's looking for work. We'll pay you
-%span.bold.red $50
-for every interview they take. That's some serious mula.
+  We handpick the people we highlight each week. We'll let you know in advance when you get selected.
 
-.space15
+  .space20
+  If you have any other questions you can reach us at
+  = mail_to "support@#{root_domain}."
 
-= image_tag 'brace_yourself.png'
+  .space20
+  =# Also, please refer anyone else you know that's looking for work. We'll pay you
+  =# %span.green $50
+  =# if they accept an interview.
 
-.space15
+  .space15
 
-= link_to "Back to home page", root_path
+  = image_tag 'brace_yourself.png'
+
+  .space30
+
+  = link_to "Go home", root_path
 

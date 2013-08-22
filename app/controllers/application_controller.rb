@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   end
 
   def root_domain
-    '500interviews.co'
+    'curljobs.com'
   end
   helper_method :root_domain
 

@@ -1,77 +1,25 @@
+%article#main
 
-- if flash[:error]
-  %error= flash[:error]
+  We send out a weekly email to over 300 companies with a list of skilled developers who are looking for work.
 
-%h1 The fastest way to land interviews at tech companies
-Every week we compile a small list of talented developers and designers that are looking for jobs,
-then we send this list out to companies that are hiring. 
+  .space30
 
-.gray_line
+  %strong Devs:
+  Use curl jobs to get many interviews quickly and without hassle. It’s free for you.
 
-%h2 Designers &amp; Developers: Looking for work? Get interviews on a silver platter.
+  .space20
 
-Over 300 companies are signed up with us and looking to hire. You can pick and choose the interviews you want to take.
-Your name and other identifying info will be kept private until you accept an invitation to interview.
-500 Interviews is completely free for you.
+  = link_to "Dev signup", [:new, :candidate]
+  .or ||
+  = link_to "How it works".html_safe, devs_how_it_works_path
 
-.space
-.space
-  
-= form_tag new_candidate_path, method: :get do
-  = submit_tag 'Sign Up', class: 'btn'
-  %span.grey.aside_button All aboard the jobs train. Choo choo!
+  .space30
 
-.gray_line
+  %strong Companies:
+  Use curl jobs to find skilled devs without paying massive recruiting fees.
 
-%h2 Companies: Hiring devs? Save time and money.
+  .space20
 
-500 Interviews can save you thousands of dollars on recruting fees that you might pay to a traditional recruiter.
-Each week we send you a curated list of skilled developers or designers.
-
-.space
-.space
-= form_for company do |f|
-  %label{ style: 'text-align:left;width:75px;' } Your email:
-  = f.text_field :email
-  %br
-  .space
-  .space
-  What roles are you looking to fill?
-  .space
-  %label
-    = f.check_box "front_end"
-    Front-end Developers
-  .space
-  %label
-    = f.check_box "back_end" 
-    Back-end Programmers
-  .space
-  %label
-    = f.check_box "designers"
-    Designers
-  .space
-  %label
-    = f.check_box "sys_admins"
-    Sys-Admins
-  .space
-  %label
-    = f.check_box "project_managers" 
-    Project Managers
-
-  .space
-  .space
-  = f.submit 'Sign Up', class: 'btn'
-  %span.grey.aside_button No third-party recruiters please
-
-:css
-  label {
-    width:180px;
-    text-align:left;
-  }
-
-  input[type="checkbox"] {
-    margin-right:4px;
-    margin-bottom:4px;
-    }
-
-= javascript_include_tag "home_page"
+  = link_to "Company signup", [:new, :company]
+  .or ||
+  = link_to "How it works".html_safe, companies_how_it_works_path

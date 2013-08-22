@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title 500 Interviews
+    %title Curl Jobs
     = stylesheet_link_tag "bootstrap-buttons"
     = stylesheet_link_tag "bootstrap-form"
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
@@ -11,24 +11,13 @@
     = yield :head
 
   %body
-    #container
-      #header
-        #inside
-          = link_to :root do
-            = image_tag 'logo.png', class: 'logo'
-          #nav
-            = link_to 'FAQ', :faq
-            = link_to 'About', :about
-            = link_to 'Contact', :contact
-            -#= link_to 'Login', '#'
+    %section
+      %header
+        = link_to :root do
+          = image_tag 'logo.png', id: 'logo'
 
-      #wrapper
-        = yield
-      #footer
-        .inside
-          &copy; 500 Interviews. All rights reserved.
-      %div{ style: 'clear:both;' }
+      = yield
 
-    = javascript_include_tag "//static.getclicky.com/js"
-    :javascript
-      try{ clicky.init(100627509); }catch(e){}
+    %footer
+      %article
+        &copy; Copyright all the things. Curl Jobs #{Time.now.year}.
