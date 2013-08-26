@@ -1,14 +1,16 @@
 # Todo
 
-- Let employers select languages
-
 - Add favicon
-
-- Add option for devs to prefer remote work
 
 - Gather companies
 
 - Launch
+
+# Icebox
+
+- Let employers select languages
+
+- Add option for devs to prefer remote work
 
 
 Email Message:
