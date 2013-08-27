@@ -6,7 +6,7 @@ class CompaniesController < ApplicationController
     if company.save
       redirect_to success_companies_path 
     else
-      redirect_to root_path, flash: { error: "Something went wrong, sorry." }
+      redirect_to new_company_path, flash: { error: "Please enter your email address." }
     end
   end
 

@@ -6,7 +6,7 @@ class CandidatesController < ApplicationController
     if candidate.save
       redirect_to success_candidates_path
     else
-      redirect_to new_candidate_path, flash: { error: "Sorry, but something went wrong." }
+      redirect_to new_candidate_path, flash: { error: "Please fill in all the fields." }
     end
   end
 

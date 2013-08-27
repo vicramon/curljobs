@@ -1,5 +1,8 @@
 %article
 
+  - if flash[:error]
+    .error= flash[:error]
+
   = form_for candidate do |f|
 
     .space10
