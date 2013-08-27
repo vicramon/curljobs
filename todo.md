@@ -1,7 +1,5 @@
 # Todo
 
-- Add favicon
-
 - Gather companies
 
 - Launch
@@ -44,10 +42,17 @@ Other email:
 
 Hi!
 
-... we have a list.. are you interested in getting our email.. one click un-subscribe at any time, only $99 to interview, no fees on anything else. 
+How are you? I'm contacting you because I saw your job posting on (place).
+
+I'm a developer trying to make techincal recruiting not suck. My project is called Curl Jobs, and I'm launching it next week. I'd like to invite you to join if you're interested.
+
+Here's how it works: Once a week we'll send you a list of skilled devs who are looking for work. It will be free to get the email and free to hire anyone you meet through it. Our only fee is $99 to interview a prospective candidate.
+
+Is this something that you and your company would be interested in? Please let me know. I'll be launching with a list of about 40 top-notch developers that I have obtained through my own personal connections, though I'll also be doing other marketing activities to get more devs.
+
+Please let me know what you think!
 
 
+Best regards,
 
-
-
-
+Chris Bryant
