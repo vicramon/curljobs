@@ -1,9 +1,12 @@
-%h1 Login
-.space20
-= form_tag admin_login_path do
-  = password_field_tag 'password'
-  .space15
-  = submit_tag 'Login', class: 'btn'
+%article
+  Login
+
+  .space20
+
+  = form_tag admin_login_path do
+    = password_field_tag 'password'
+    .space15
+    = submit_tag 'Login'
 
   
 
